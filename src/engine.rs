@@ -1,7 +1,7 @@
 pub mod pixel;
 pub mod vector2f;
 
-use console_engine::{ConsoleEngine, KeyCode};
+use console_engine::{ConsoleEngine, KeyCode, screen};
 use pixel::Pixel;
 use vector2f::Vec2f;
 
@@ -16,8 +16,7 @@ impl MyEngine {
         }
     }
 
-    // FIXME: a problem will occur here... :]
-    pub fn set_pixel(&mut self, position: Vec2f, pixel: Pixel) {
+    pub fn set_pixel(&mut self, position: Vec2f, pixel: &Pixel) {
         let px = console_engine::pixel::pxl_fbg(' ', pixel.color, pixel.color);
         let x = position.x() * 2.0;
         self.my_console.set_pxl(x as i32, position.y() as i32, px);
@@ -59,4 +58,5 @@ impl MyEngine {
     pub fn get_width(&self) -> u32 {
         self.my_console.get_width()
     }
+
 }
