@@ -12,7 +12,8 @@ fn main() {
         Pixel::new(Color::Magenta, Vec2f::inew(0, 0)),
         Pixel::new(Color::Magenta, Vec2f::inew(1, 0)),
         Pixel::new(Color::Magenta, Vec2f::inew(1, 1)),
-        Pixel::new(Color::Magenta, Vec2f::inew(1, 2)),
+        Pixel::new(Color::Magenta, Vec2f::inew(2, 1)),
+        Pixel::new(Color::Magenta, Vec2f::inew(2, 2)),
     ];
 
     // let center = Vec2f::new(
